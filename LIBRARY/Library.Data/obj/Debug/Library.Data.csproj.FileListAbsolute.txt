@@ -1,0 +1,14 @@
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\Library.Data\bin\Debug\Library.Data.dll.config
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\Library.Data\bin\Debug\Library.Data.dll
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\Library.Data\bin\Debug\Library.Data.pdb
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\Library.Data\bin\Debug\EntityFramework.dll
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\Library.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\Library.Data\bin\Debug\Library.Models.dll
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\Library.Data\bin\Debug\Library.Models.pdb
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\Library.Data\bin\Debug\EntityFramework.xml
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\Library.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\Library.Data\obj\Debug\Library.Data.csprojAssemblyReference.cache
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\Library.Data\obj\Debug\Library.Data.csproj.CoreCompileInputs.cache
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\Library.Data\obj\Debug\Library.Data.csproj.CopyComplete
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\Library.Data\obj\Debug\Library.Data.dll
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\Library.Data\obj\Debug\Library.Data.pdb
