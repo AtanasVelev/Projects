@@ -9,25 +9,26 @@ namespace Library.Models
 {
     public class Customer
     {
-        private ICollection<Book> books;
-        public int Id { get; set; }
-        
-        public string CustomerName { get; set; }
-       
+        public int CustomerId { get; set; }
+
+        [Required]
+        public string Name { get; set; }
+
+        [Required]
+        public int EGN { get; set; }
+
+        [Required]
         public long IDcard { get; set; }
-        
+
         public string Address { get; set; }
         public Gender Gender { get; set; }
-        public string PhoneNumber { get; set; }
+        public int PhoneNumber { get; set; }
         public string Email { get; set; }
+
+        public virtual ICollection<BookCustomer> BookCustomers { get; set; }
         public Customer()
         {
-            this.books = new HashSet<Book>();
         }
-        public virtual ICollection<Book> Books
-        {
-            get { return this.books; }
-            set { this.books = value; }
-        }
+      
     }
 }

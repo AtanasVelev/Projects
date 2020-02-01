@@ -13,36 +13,29 @@ namespace Library.Client
 {
     class Program
     {
-       
-
         static void Main(string[] args)
         {
           
             Database.SetInitializer(
                 new MigrateDatabaseToLatestVersion<LibraryContext, Configuration>());
-            var author1 = new Author();
-            author1.Name = "Ivan Ivanov";
-            author1.YearOfBirth = 1990;
-            author1.Gender = Gender.Male;
-           
 
-            var book1 = new Book();
-            book1.Title = "Zeleno ezero";
-            book1.ReleaseYear = 2000;
-            book1.PagesNum = 177;
-            book1.Author = author1;
-           
+            var author = new AuthorServices();
+         // author.AddAuthor("Ivan Popov", Gender.Male, 1998);
+            var author2 = new AuthorServices();
+         //  author2.AddAuthor("Antoan Elenkov", Gender.Male, 1990);
+            var author3 = new AuthorServices();
+            // author3.AddAuthor("Georgi Atanasov", Gender.Male, 1966);
 
-            var customer1 = new Customer();
-            customer1.CustomerName = "Peyo Peev";
-            customer1.Address = " \" Ala-Bala street\" ";
-            customer1.Email = "ala-bala@gmail.com";
-            customer1.Gender = Gender.Female;
-            customer1.PhoneNumber = "0898 765 145";
-            customer1.IDcard = 13123132332321;
 
-            var newAuthor = new AuthorServices();
-            newAuthor.AddAuthor("PopEye", Gender.Male, 1998);
+            var book1 = new BookServices();
+            //book1.AddBook(1, "Zelenoto Ezero", 206, 2006);
+            var customer1 = new CustomerServices();
+            //customer1.AddCustomer("Velichka Blagoeva", 123786435, "Atanas Ishirkov street", Gender.Female, 0978654532, "vilitY@abv.bg");
+           // customer2.UpdateCustomer(2, "Velichka Blagoeva", 123786435, "Atanas Ishirkov street", Gender.Female, 0978654532, "vilitY@abv.bg");
+
+            var book = new BookServices();
+            //book.UpdateBook(3, "Fitnezz made easy", 10000, 1998);
+            
         }
        
     }

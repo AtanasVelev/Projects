@@ -1,24 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Library.Models;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Library.Models;
-
 
 namespace Library.Data
 {
     public class LibraryContext : DbContext
-
     {
-        public LibraryContext():base("LibraryDb")
+        public LibraryContext() : base("LibraryDb")
         {
-
         }
-        public DbSet<Author> Authors { get; set; }
-        public DbSet<Book> Books { get; set; }
-        public DbSet<Customer> Customers { get; set; }
 
+        public IDbSet<Author> Authors { get; set; }
+        public IDbSet<Book> Books { get; set; }
+        public IDbSet<Customer> Customers { get; set; }
+        public IDbSet<BookCustomer> BookCustomers { get; set; }
     }
 }

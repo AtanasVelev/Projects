@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,8 +12,11 @@ namespace Library.Models
     {
         private ICollection<Book> books;
         public int Id { get; set; }
+
+        [Required]
         public string Name { get; set; }
         public Gender Gender { get; set; }
+
         public int YearOfBirth { get; set; }
         public Author()
         {
