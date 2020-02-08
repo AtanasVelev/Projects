@@ -7,9 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Models", "Library.M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Data", "Library.Data\Library.Data.csproj", "{0A5626EC-7887-4EC6-B657-EFC698D8EF64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Client", "Library.Client\Library.Client.csproj", "{87107C96-6FCB-4D4E-8587-915B65E0D985}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.ConsoleClient", "Library.Client\Library.ConsoleClient.csproj", "{87107C96-6FCB-4D4E-8587-915B65E0D985}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.Services", "Library.Services\Library.Services.csproj", "{68449A08-04F7-4F16-85D6-B0C14E091390}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.MVCClient", "Library.MVCClient\Library.MVCClient.csproj", "{44172A9B-D8AA-4EF6-A0A7-CA4019BEBA26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{68449A08-04F7-4F16-85D6-B0C14E091390}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68449A08-04F7-4F16-85D6-B0C14E091390}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68449A08-04F7-4F16-85D6-B0C14E091390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44172A9B-D8AA-4EF6-A0A7-CA4019BEBA26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44172A9B-D8AA-4EF6-A0A7-CA4019BEBA26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44172A9B-D8AA-4EF6-A0A7-CA4019BEBA26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44172A9B-D8AA-4EF6-A0A7-CA4019BEBA26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

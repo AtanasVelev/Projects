@@ -14,11 +14,10 @@ namespace Library.Models
         [Required]
         [MinLength(5)]
         public string Title { get; set; }
-
-        [Range(1,int.MaxValue)]
         public int PagesNum { get; set; }
-        public int ReleaseYear { get; set; }
 
+        [Range(1, int.MaxValue)]
+        public int ReleaseYear { get; set; }
         [Required]
         public int AuthorId { get; set; }
         public virtual Author Author { get; set; }

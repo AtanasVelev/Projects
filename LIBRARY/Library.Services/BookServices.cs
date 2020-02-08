@@ -1,10 +1,8 @@
-﻿using System;
+﻿using Library.Data;
+using Library.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Library.Data;
-using Library.Models;
 
 namespace Library.Services
 {
@@ -32,9 +30,13 @@ namespace Library.Services
 
         public IQueryable<Book> GetAvailableBooks()
         {
-            return this.db.BookCustomers
-                .GroupBy(x=>x.BookId).Where(group => group.Max(x=>x.DateTo) < DateTime.Now)
-                .Select(x=>x.First().Book);
+            var allAvailableBooksWhichHaveBeenRented = this.db.BookCustomers
+                .GroupBy(x => x.BookId).Where(group => group.Max(x => x.DateTo) < DateTime.Now)
+                .Select(x => x.FirstOrDefault().Book);
+          
+            var allAvailableBooksWhichHaveNotBeenRented = db.Books.Where(x => !this.db.BookCustomers.Any(y => y.BookId == x.Id));
+
+            return allAvailableBooksWhichHaveNotBeenRented.Union(allAvailableBooksWhichHaveBeenRented);
         }
 
         public void UpdateBook(int id, string title, int pagesNum, int releaseYear, int authorId)
@@ -43,7 +45,7 @@ namespace Library.Services
 
             if (book == null)
             {
-                throw new KeyNotFoundException("There is no book with this id");
+                throw new KeyNotFoundException("There is not a book with this id");
             }
 
             book.Title = title;

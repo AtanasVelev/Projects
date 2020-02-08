@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Books";
+}
+
+<div style="color:black">
+    <div class="text-danger">
+        <h1>Book Services:</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Add Book</h2>
+        <p>
+            Add a new book to the library!
+        </p>
+        <p><a class="btn btn-default" href="/Books/Add">Add &raquo;</a></p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Delete Book</h2>
+        <p>Delete a book by ID!</p>
+        <p><a class="btn btn-default" href="/Books/Delete">Delete &raquo;</a></p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Update Book</h2>
+        <p>Change the details for a book!</p>
+        <p><a class="btn btn-default" href="/Books/Update">Update &raquo;</a></p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Get Book</h2>
+        <p>Get all the details for a book by its ID!</p>
+        <p><a class="btn btn-default" href="/Books/GetBook">Get by ID &raquo;</a></p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Get All</h2>
+        <p>Get a list with all of the books in this library!</p>
+        <p><a class="btn btn-default" href="/Books/GetAll">Get All &raquo;</a></p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Is it Rented?</h2>
+        <p>See if a particular book is available at the moment!</p>
+        <p><a class="btn btn-default" href="/Books/IsRented">Check &raquo;</a></p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Get All Available</h2>
+        <p>See which books are available at the moment!</p>
+        <p><a class="btn btn-default" href="/Books/GetAllAvailable">Get&raquo;</a></p>
+    </div>
+
+    <div class="col-md-4">
+        <h2>Get All Rented for period</h2>
+        <p>See which books were rented during a specific time period!</p>
+        <p><a class="btn btn-default" href="/Books/GetAllRentedForPeriod">Get&raquo;</a></p>
+    </div>
+</div>

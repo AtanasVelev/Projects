@@ -1,0 +1,35 @@
+﻿@using Library.Models;
+@model Author
+@{
+    ViewBag.Title = "All Authors:";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    @foreach (Author item in ViewBag.Authors)
+    {
+        <p>
+            <strong>Author ID:</strong>
+            @item.Id
+        </p>
+        <p>
+            <strong>Name:</strong>
+            @item.Name
+        </p>
+        <p>
+            <strong>Year Of Birth:</strong>
+            @item.YearOfBirth
+        </p>
+        <p>
+            <strong>Gender:</strong>
+            @item.Gender.ToString()
+        </p>
+
+        <p>
+            <strong>----------------------</strong>
+        </p>
+
+    }
+
+</div>

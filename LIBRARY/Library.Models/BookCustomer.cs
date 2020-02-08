@@ -17,7 +17,7 @@ namespace Library.Models
         public int CustomerId { get; set; }
 
         public virtual Book Book { get; set; }
-        public virtual Customer Cutomer { get; set; }
+        public virtual Customer Customer { get; set; }
 
         [Required]
         public DateTime DateFrom { get; set; }

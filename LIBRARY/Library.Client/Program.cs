@@ -35,6 +35,7 @@ namespace Library.Client
 
             var book = new BookServices();
             //book.UpdateBook(3, "Fitnezz made easy", 10000, 1998);
+           // Console.WriteLine(book.GetBookById(2).Title);
             
         }
        

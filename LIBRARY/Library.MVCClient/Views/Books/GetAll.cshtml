@@ -1,0 +1,38 @@
+﻿@using Library.Models;
+@model Book
+@{
+    ViewBag.Title = "All Books:";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    @foreach (Book item in ViewBag.Books)
+    {
+        <p>
+            <strong>Book ID:</strong>
+            @item.Id
+        </p>
+        <p>
+            <strong>Title:</strong>
+            @item.Title
+        </p>
+        <p>
+            <strong>Number of Pages:</strong>
+            @item.PagesNum
+        </p>
+        <p>
+            <strong>Release Year:</strong>
+            @item.ReleaseYear
+        </p>
+        <p>
+            <strong>Author:</strong>
+            @item.Author.Name
+        </p>
+        <p>
+            <strong>----------------------</strong>
+        </p>
+
+    }
+
+</div>

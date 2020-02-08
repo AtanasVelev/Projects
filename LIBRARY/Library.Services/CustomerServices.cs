@@ -8,7 +8,7 @@ using Library.Models;
 
 namespace Library.Services
 {
-    public class CustomerServices
+    public class CustomerServices : ICustomerServices
     {
         private readonly LibraryContext db;
 
@@ -16,12 +16,8 @@ namespace Library.Services
         {
             this.db = new LibraryContext();
         }
-        public void GetBooks(Book[] books)
-        {
 
-        }
-
-        public void AddCustomer(string name, long idCard, string address, Gender gender, int phoneNum, string email)
+        public void AddCustomer(string name, long idCard, string address, Gender gender, int phoneNum, string email, long egn)
         {
             var customer = new Customer()
             {
@@ -30,17 +26,22 @@ namespace Library.Services
                 Address = address,
                 Gender = gender,
                 PhoneNumber = phoneNum,
-                Email = email
+                Email = email,
+                EGN = egn
             };
             db.Customers.Add(customer);
             db.SaveChanges();
 
         }
-        public void UpdateCustomer(int id, string name, int idCard, string address, Gender gender, int phoneNum, string email)
+        public void UpdateCustomer(int id, string name, long egn, long idCard, string address, Gender gender, int phoneNum, string email)
         {
             Customer customer = db.Customers.Find(id);
-            // check if customer exists
+            if (customer == null)
+            {
+                throw new KeyNotFoundException("There is not a customer with this id");
+            }
             customer.Name = name;
+            customer.EGN = egn;
             customer.IDcard = idCard;
             customer.Address = address;
             customer.Gender = gender;
@@ -54,7 +55,7 @@ namespace Library.Services
             db.Customers.Remove(customer);
             db.SaveChanges();
         }
-        public IQueryable<Customer> GetAllCustomers()
+        public IEnumerable<Customer> GetAllCustomers()
         {
             return db.Customers;
         }

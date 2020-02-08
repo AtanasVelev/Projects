@@ -1,0 +1,5 @@
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\LIBRARY\Library.Models\bin\Debug\Library.Models.dll
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\LIBRARY\Library.Models\bin\Debug\Library.Models.pdb
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\LIBRARY\Library.Models\obj\Debug\Library.Models.csprojAssemblyReference.cache
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\LIBRARY\Library.Models\obj\Debug\Library.Models.dll
+C:\Users\Acer-Nitro5\source\repos\SWIF_EXAM_LIBRARY\LIBRARY\Library.Models\obj\Debug\Library.Models.pdb

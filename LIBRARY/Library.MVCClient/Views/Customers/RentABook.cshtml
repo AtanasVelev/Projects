@@ -1,0 +1,48 @@
+﻿@using Library.Models;
+
+@model BookCustomer
+@{
+    ViewBag.Title = "Rent A Book";
+}
+
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm("RentABook", "Customers", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.BookId, "Book ID*", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.BookId, new { @class = "form-control", @value = "", @type = "number" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.CustomerId, "Customer ID*", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.CustomerId, new { @class = "form-control", @value = "", @type = "number" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.DateFrom, "Date from:", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.DateFrom, new { @class = "form-control", @value = "qwerty", @type = "date" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.DateTo, "Date to:", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.DateTo, new { @class = "form-control", @value = "qwerty", @type = "date" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn  btn-primary" value="Rent a book" />
+        </div>
+    </div>
+}
+
+
+

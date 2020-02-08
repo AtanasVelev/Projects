@@ -15,7 +15,7 @@ namespace Library.Models
         public string Name { get; set; }
 
         [Required]
-        public int EGN { get; set; }
+        public long EGN { get; set; }
 
         [Required]
         public long IDcard { get; set; }
@@ -26,9 +26,6 @@ namespace Library.Models
         public string Email { get; set; }
 
         public virtual ICollection<BookCustomer> BookCustomers { get; set; }
-        public Customer()
-        {
-        }
       
     }
 }

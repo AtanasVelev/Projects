@@ -1,0 +1,55 @@
+﻿@using Library.Models;
+
+@model Book
+@{
+    ViewBag.Title = "Update a Book";
+}
+
+<h2>@ViewBag.Title</h2>
+@using (Html.BeginForm("Update", "Books", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Id, "Book ID*", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Id, new { @class = "form-control", @value = "book ID" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Title, "Title", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Title, new { @class = "form-control", @value = "Title" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.AuthorId, "Author ID", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.AuthorId, new { @class = "form-control", @value = "qwerty", @type = "author ID" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.ReleaseYear, "Release year", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.ReleaseYear, new { @class = "form-control", @value = "qwerty", @type = "release year" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.PagesNum, "Number Of Pages", new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.PagesNum, new { @class = "form-control", @value = "qwerty", @type = "number of pages" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn  btn-primary" value="Update" />
+        </div>
+    </div>
+}

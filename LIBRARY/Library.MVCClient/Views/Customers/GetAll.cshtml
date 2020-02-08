@@ -1,0 +1,51 @@
+﻿@using Library.Models;
+@model Customer
+@{
+    ViewBag.Title = "All Customers:";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    @foreach (Customer item in ViewBag.Customers)
+    {
+        <p>
+            <strong>ID:</strong>
+            @item.CustomerId
+        </p>
+        <p>
+            <strong>Name:</strong>
+            @item.Name
+        </p>
+
+        <p>
+            <strong>Phone Number:</strong>
+            @item.PhoneNumber
+        </p>
+        <p>
+            <strong>ID Card:</strong>
+            @item.IDcard
+        </p>
+        <p>
+            <strong>Gender:</strong>
+            @item.Gender.ToString()
+        </p>
+        <p>
+            <strong>E-mail:</strong>
+            @item.Email
+        </p>
+        <p>
+            <strong>EGN:</strong>
+            @item.EGN
+        </p>
+        <p>
+            <strong>Address:</strong>
+            @item.Address
+        </p>
+        <p>
+            <strong>----------------------</strong>
+        </p>
+
+        }
+
+    </div>

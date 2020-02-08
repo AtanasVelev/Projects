@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Library.Services
 {
-    public class AuthorServices
+    public class AuthorServices : IAuthorServices
     {
         private readonly LibraryContext db;
 
@@ -14,18 +14,12 @@ namespace Library.Services
             this.db = new LibraryContext();
         }
 
-        public void AddBook(int bookId, int authorId)
+        public IEnumerable<Book> GetBooks(int id)
         {
-            var author = this.db.Authors.Find(authorId);
-            var book = this.db.Books.Find(bookId);
-            if (author == null || book == null)
-            {
-                throw new KeyNotFoundException("There is no author or book with this id");
-            }
-
-            author.Books.Add(book);
-            db.SaveChanges();
+            var author = this.db.Authors.Find(id);
+            return author.Books.ToArray();
         }
+
         public void AddAuthor(string Name, Gender Gender, int YearOfBirth)
         {
             var author = new Author() { Name = Name, Gender = Gender, YearOfBirth = YearOfBirth };
@@ -33,23 +27,29 @@ namespace Library.Services
             db.SaveChanges();
 
         }
-        public IQueryable<Author> GetAllAuthors()
+        public IEnumerable<Author> GetAllAuthors()
         {
-           return db.Authors;
+            return db.Authors;
         }
         public void DeleteAuthor(int id)
         {
             Author author = db.Authors.Find(id);
-            // check if author exists
+            if (author == null)
+            {
+                throw new KeyNotFoundException("There is not an author with this id");
+            }
             db.Authors.Remove(author);
             db.SaveChanges();
         }
-        public void UpdateAuthor(int id, string name, int birthYear, Gender gender)
+        public void UpdateAuthor(int id, string name, int yearOfBirth, Gender gender)
         {
             Author author = db.Authors.Find(id);
-            // add validation
+            if (author == null)
+            {
+                throw new KeyNotFoundException("There is not an author with this id");
+            }
             author.Name = name;
-            author.YearOfBirth = birthYear;
+            author.YearOfBirth = yearOfBirth;
             author.Gender = gender;
 
             db.SaveChanges();

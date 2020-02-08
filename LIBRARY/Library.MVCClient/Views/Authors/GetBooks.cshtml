@@ -1,0 +1,25 @@
+﻿@using Library.Models;
+
+@model Author
+@{
+    ViewBag.Title = "Get all books written by:";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("GetBooks", "Authors", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+
+{@Html.AntiForgeryToken()
+<div class="form-group">
+    @Html.LabelFor(m => m.Id, "Author ID*", new { @class = "col-md-2 control-label" })
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control", @value = "delete book by Id" })
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <input type="submit" class="btn  btn-primary" value="Get" />
+    </div>
+</div>
+
+}
