@@ -3,7 +3,6 @@ using Library.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Library.MVCClient.Controllers
@@ -111,10 +110,11 @@ namespace Library.MVCClient.Controllers
         }
 
         [HttpPost]
+        
         public ActionResult Add(int authorId, string title, int releaseYear, int pagesNum)
         {
 
-            booksService.AddBook(authorId, title, releaseYear, pagesNum); // exception na authorID?
+            booksService.AddBook(authorId, title, releaseYear, pagesNum); 
 
             return View("Added");
         }

@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Library.Services
 {
-    public class BookCustomerServices : IBookCustomerServices
+    public class BookCustomerServices 
     {
         private readonly LibraryContext db;
 

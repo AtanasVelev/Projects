@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Library.Services
 {
-    public class AuthorServices : IAuthorServices
+    public class AuthorServices 
     {
         private readonly LibraryContext db;
 

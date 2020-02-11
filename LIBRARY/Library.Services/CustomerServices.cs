@@ -8,7 +8,7 @@ using Library.Models;
 
 namespace Library.Services
 {
-    public class CustomerServices : ICustomerServices
+    public class CustomerServices 
     {
         private readonly LibraryContext db;
 

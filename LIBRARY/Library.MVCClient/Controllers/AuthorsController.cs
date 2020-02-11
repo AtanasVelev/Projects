@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using Library.Models;
 using System.Linq;
+using Library.MVCClient.Models;
 
 namespace Library.MVCClient.Controllers
 {
@@ -39,9 +40,9 @@ namespace Library.MVCClient.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Update(int id, string name, int yearOfBirth, Gender Gender) // да се махне полът да се едитва
+        public ActionResult Update(AuthorViewModel model)
         {
-            service.UpdateAuthor(id, name, yearOfBirth, Gender);
+            service.UpdateAuthor(model.Id,model.Name,model.YearOfBirth,model.IsMale? Gender.Male: Gender.Female);
             return View("Updated");
         }
 
@@ -78,10 +79,10 @@ namespace Library.MVCClient.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult AddAuthor(string Name, int yearOfBirth, Gender Gender)
+        public ActionResult AddAuthor(AuthorViewModel model)
         {
 
-            service.AddAuthor(Name, Gender, yearOfBirth);
+            service.AddAuthor(model.Name, model.IsMale ? Gender.Male : Gender.Female,model.YearOfBirth);
             return View("Added");
         }
     }

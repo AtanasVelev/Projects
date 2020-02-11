@@ -28,7 +28,7 @@ namespace Library.Services
             return db.Books.Find(id);
         }
 
-        public IQueryable<Book> GetAvailableBooks()
+        public IEnumerable<Book> GetAvailableBooks()
         {
             var allAvailableBooksWhichHaveBeenRented = this.db.BookCustomers
                 .GroupBy(x => x.BookId).Where(group => group.Max(x => x.DateTo) < DateTime.Now)
@@ -62,7 +62,7 @@ namespace Library.Services
             db.Books.Remove(book);
             db.SaveChanges();
         }
-        public IQueryable<Book> GetAllBooks()
+        public IEnumerable<Book> GetAllBooks()
         {
             return db.Books;
         }

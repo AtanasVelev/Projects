@@ -4,10 +4,11 @@
 }
 @model List<int>
 
-<h2>Get All Rented For Period</h2>
+<h2>All books which have been rented in 2020 </h2>
 @for (int i = 1; i <= 12; i++)
 {
-    <div>Month: <strong>@CultureInfo.CreateSpecificCulture("en").DateTimeFormat.GetAbbreviatedMonthName(i)</strong></div>
+    <div><strong>@CultureInfo.CreateSpecificCulture("en").DateTimeFormat.GetAbbreviatedMonthName(i)</strong></div>
     <div>Number of rented books: <strong>@ViewBag.Books[i - 1]</strong></div>
+    <div><strong>----------------------</strong></div>
 }
 

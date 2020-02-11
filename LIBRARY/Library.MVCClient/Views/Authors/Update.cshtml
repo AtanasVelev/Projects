@@ -1,6 +1,6 @@
-﻿@using Library.Models;
+﻿@using Library.MVCClient.Models
 
-@model Author
+@model AuthorViewModel
 @{
     ViewBag.Title = "Update an Author";
 }
@@ -15,14 +15,14 @@
     <div class="form-group">
         @Html.LabelFor(m => m.Id, "Author ID*", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Id, new { @class = "form-control", @value = "book ID" })
+            @Html.TextBoxFor(m => m.Id, new { @class = "form-control" })
         </div>
     </div>
 
     <div class="form-group">
         @Html.LabelFor(m => m.Name, "Name", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @value = "Title" })
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
         </div>
     </div>
 
@@ -33,9 +33,9 @@
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Gender, "Gender", new { @class = "col-md-2 control-label" })
+        @Html.LabelFor(m => m.IsMale, "Is Male:", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Gender, new { @class = "form-control", @value = "qwerty", @type = "author ID" })
+            @Html.TextBoxFor(m => m.IsMale, new { @class = "form-control", @value = "qwerty", @type = "checkbox" })
         </div>
     </div>
 

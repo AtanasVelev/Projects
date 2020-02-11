@@ -1,10 +1,9 @@
 ﻿using Library.Models;
-using Library.Services;
-using System.Web.Mvc;
-using System.Linq;
-using System;
 using Library.MVCClient.Models;
+using Library.Services;
+using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Library.MVCClient.Controllers
 {
@@ -61,10 +60,11 @@ namespace Library.MVCClient.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Update(int customerid, string name,long egn, long idCard, string address, Gender gender, int phoneNumber, string email) 
-            // да се махне полът да се едитва И 
+        public ActionResult Update(CustomerViewModel model) 
+           
         {
-            booksService.UpdateCustomer(customerid, name, egn,idCard, address, gender, phoneNumber, email);
+            booksService.UpdateCustomer(model.CustomerId,model.Name, model.EGN, model.IDcard, model.Address,
+                model.IsMale ? Gender.Male : Gender.Female, model.PhoneNumber, model.Email);
             return View("Updated");
         }
 

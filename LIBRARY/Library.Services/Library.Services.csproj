@@ -56,9 +56,6 @@
     <Compile Include="BookServices.cs" />
     <Compile Include="BookCustomerServices.cs" />
     <Compile Include="CustomerServices.cs" />
-    <Compile Include="IAuthorServices.cs" />
-    <Compile Include="IBookCustomerServices.cs" />
-    <Compile Include="ICustomerServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
